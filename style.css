@@ -1,0 +1,76 @@
+/* style.css */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: yuppy;
+    src: url(./../ClearSansDisplayRegular.woff2);
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: yuppy;
+}
+
+.accounts h2{
+    cursor: pointer;
+    color: rgb(153, 153, 153);
+    transition: all ease .1s;
+}
+.accounts h2 i{
+    opacity: 0;
+}
+
+.logo-container {
+    overflow: hidden; /* Prevent overflow of the container */
+    position: relative; /* Positioning context for the animation */
+    width: 100%; /* Full width */
+    white-space: nowrap;
+}
+
+.logo{
+    display: flex;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.logo img{
+    margin: 0 25px;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#count{
+    transition: all ease .3s;
+}
+#vid{
+    transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+#buttons :nth-child(2){
+    color: black;
+}
+
+#buttons :nth-child(2) i{
+    opacity: 1;
+}
+
+.part{
+    transition: all ease 0.3s;
+}
+
+h2:hover i{
+    opacity: 1;
+}
